@@ -1,5 +1,4 @@
-﻿namespace FSharpLibrary
+﻿namespace ICI.FSharpLibrary
 
-module Say =
-    let hello name =
-        printfn "Hello %s" name
+module FMath =
+    let inline Twice x = x + x
