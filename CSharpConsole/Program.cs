@@ -8,7 +8,7 @@ namespace CSharpConsole {
             var result = FMath.Twice<double, double>(n);
             Console.WriteLine($"Twice {n} = {result:N1}");
             var s = "Word";
-            var sresult = FMath.Twice<string, string>(s);
+            var sresult = FMath.TwiceX(s);
             Console.WriteLine($"Twice {s} = {sresult}");
             Console.ReadKey();
         }
