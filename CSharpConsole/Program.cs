@@ -12,6 +12,7 @@ namespace CSharpConsole {
             Console.WriteLine($"Twice {s} = {sresult}");
 
             var wilma = new FMath.RegisteredCustomer(id: "Wilma", isEligible: false);
+            //wilma.IsEligible = true; // Error: property cannot be assigned to - it is read only.
             var lst = FMath.CustomerList; // <-- requires a reference to FSharp.Core assembly.
             Console.ReadKey();
         }
