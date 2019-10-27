@@ -5,8 +5,6 @@ module FMath =
 
     let inline TwiceX (x: ^a) : ^a = x + x
 
-    // Modifying an attribute of a DU case.
-
     //[<CLIMutable>]
     type RegisteredCustomer = {
         Id: string
@@ -22,9 +20,12 @@ module FMath =
         | Guest of UnregisteredCustomer
 
     let fred = RegisteredCustomer { Id = "Fred"; IsEligible = false }
-    //let fredEligible = RegisteredCustomer { fred with IsEligible = true }
-
     let sandra = Guest { Id = "Sandra" }
 
     // List of Discriminated Unions (DUs).
     let CustomerList = [fred; sandra]
+
+    // Modifying an attribute of a DU case.
+    //let fredEligible = RegisteredCustomer { fred with IsEligible = true } <-- compile Error.
+    // vvvv Warning: pattern match does not match all cases.
+    //let fredEligible = let (RegisteredCustomer regFred) = fred in RegisteredCustomer { regFred with IsEligible = true }
