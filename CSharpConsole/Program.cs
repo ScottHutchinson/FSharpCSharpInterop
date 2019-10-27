@@ -10,6 +10,9 @@ namespace CSharpConsole {
             var s = "Word";
             var sresult = FMath.TwiceX(s);
             Console.WriteLine($"Twice {s} = {sresult}");
+
+            var wilma = new FMath.RegisteredCustomer(id: "Wilma", isEligible: false);
+            var lst = FMath.CustomerList; // <-- requires a reference to FSharp.Core assembly.
             Console.ReadKey();
         }
     }

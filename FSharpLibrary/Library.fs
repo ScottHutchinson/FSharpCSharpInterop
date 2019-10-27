@@ -6,6 +6,8 @@ module FMath =
     let inline TwiceX (x: ^a) : ^a = x + x
 
     // Modifying an attribute of a DU case.
+
+    //[<CLIMutable>]
     type RegisteredCustomer = {
         Id: string
         IsEligible: bool
@@ -25,4 +27,4 @@ module FMath =
     let sandra = Guest { Id = "Sandra" }
 
     // List of Discriminated Unions (DUs).
-    let lst = [fred; sandra]
+    let CustomerList = [fred; sandra]
